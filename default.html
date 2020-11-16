@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>Default</title>
+</head>
+<body>
+    <style>
+        *{
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #474350;
+            outline: none;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #FAFAC6;
+        }
+        #container{
+            display: grid;
+            background-color: #FCFFEB;
+            width: 1080px;
+            margin: auto;
+        }
+
+        .itm{
+            position: relative;
+            /* 그리드 표시 */
+            /* background-color: #FECDAA; */
+            /* 그리드 없애기 */
+            background-color: #FCFFEB; 
+            height: 800px;
+            width: 800px;
+            margin: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .content{
+            outline: 5px dashed #474350 ;
+            background-color: #F8FFF4;
+            outline-offset:-10px;  
+            transition: all .15s ease-in-out;
+            width: 500px;
+            height: 500px;
+        }.input_img{
+            /* display: inline; */
+            display: none;
+            position: relative;
+            font-weight: 800;
+            font-size: 20px;
+            top: 200px;
+            left: 30%;
+            transform: translateX(-12.5%);
+        }
+
+        .basic{
+            position: relative;
+        }
+
+        /* 제품 사진 및 설명 pii */
+        .basic.pii.img{    
+            margin: auto;
+            top: 50px;
+        }
+        .basic.pii.text_wrap{
+            top: 80px;
+            text-align: center;
+        }
+        .basic.pii.text.title{
+            font-weight: 800;
+            font-size: 20px;
+        }
+        .basic.pii.text.info{
+            font-weight: 400;
+        }    
+        .basic.pii.text_wrap .txtChum{
+            width: 350px;
+            height: 150px;
+        }
+        .basic.pii.text_wrap .txtBtn{
+            color: white;
+            background-color: #474350;
+            width: 60px;
+            height: 30px;
+            padding-top: 5px;
+            border-radius: 40px 40px 40px 40px;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        /* 제품 상세사진 psi */
+        .basic.psi.img{
+            height: 720px;
+            width: 720px;
+            top: 40px;
+            margin: auto;
+        }
+
+        /* 브랜드 소개  pbi */
+        .basic.pbi.logo{
+            display: inline-block;
+            margin: 10px;
+            width: 350px;
+            height: 350px;
+            top: 30px;
+            left: 30px;
+        }
+        .basic.pbi.text_wrap{
+            top: 30px;
+            left: 40px;
+        }
+        .basic.pbi.text.title{
+            font-weight: 800;
+            font-size: 50px;
+        }
+        .basic.pbi.text.info{
+            font-weight: 400;
+            font-size: 20px;
+        }
+
+        /* 제품 소재 pmi */
+        .basic.pmi.img{
+            width: 350px;
+            height: 350px;
+            top: 10px;
+            left: 10px;
+            margin: 25px;
+        }
+        .basic.pmi.text_wrap{
+            position: fixed;
+            display: inline-block;
+            width: 350px;
+            top: 25px;
+            right: 25px;
+        }
+        .basic.pmi.text.title{
+            font-weight: 800;
+            font-size: 50px;
+        }
+        .basic.pmi.text.info{
+            font-weight: 400;
+        }
+
+        /* 제품 사이즈 */
+
+        /* 안내사항 */
+    </style>
+    <div id="container">
+
+        <!-- 
+            pii == 제품 사진 및 설명 
+            psi == 제품 상세사진
+            pbi == 브랜드 소개
+            pmi == 제품 소재
+        -->
+
+        <div class="itm pii">
+            <div class="content basic pii img"><div class="input_img">INPUT IMAGE</div></div>
+            <div class="basic pii text_wrap">
+                <span class="basic pii text title">Hello This Is A Test</span>
+                <p class="basic pii text info">
+                    This Item Is New One <br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+                    In vel fringilla dui. Mauris convallis nulla sed diam tristique, <br>   
+                    hendrerit placerat augue convallis. <br>
+                    Ut pulvinar commodo odio, et sagittis tellus pretium eget. <br>
+                </p>
+            </div>
+        </div>
+
+        <div class="itm psi">
+            <div class="content basic psi img"><div class="input_img">INPUT IMAGE</div></div>
+        </div>
+
+        <div class="itm pbi">
+            <div class="content basic pbi logo"><div class="input_img">INPUT IMAGE</div></div>
+            <div class="content basic pbi logo"><div class="input_img">INPUT IMAGE</div></div>
+            <div class="basic pbi text_wrap">
+                <span class="basic pbi text title">BRAND NAME</span>
+                <p class="basic pbi text info">
+                    This Item Is New One <br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+                    In vel fringilla dui. Mauris convallis nulla sed diam tristique, <br>   
+                    hendrerit placerat augue convallis. <br>
+                    Ut pulvinar commodo odio, et sagittis tellus pretium eget. <br>
+                    Aenean ut eros id ante vestibulum lobortis eget vitae lectus. <br>
+                    Proin mattis congue nisi ac egestas. Mauris metus augue, <br>
+                    luctus vitae placerat non, sollicitudin convallis neque. <br>
+                    Phasellus posuere tincidunt urna sed ultricies. <br>
+                </p>
+            </div>
+        </div>
+
+        <div class="itm pmi">
+            <div class="content basic pmi img"><div class="input_img">INPUT IMAGE</div></div>
+            <div class="content basic pmi img"><div class="input_img">INPUT IMAGE</div></div>
+            <div class="basic pmi text_wrap">
+                <span class="basic pmi text title">MATERIAL1</span>
+                <p class="basic pmi text info">
+                    This Material Is New One <br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+                    In vel fringilla dui. Mauris convallis nulla sed diam tristique, <br>   
+                    hendrerit placerat augue convallis. <br>
+                    Ut pulvinar commodo odio, et sagittis tellus pretium eget. <br>
+                    Aenean ut eros id ante vestibulum lobortis eget vitae lectus. <br>
+                </p>
+                <br>
+                <br>
+                <span class="basic pmi text title">MATERIAL1</span>
+                <p class="basic pmi text info">
+                    This Material Is New One <br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+                    In vel fringilla dui. Mauris convallis nulla sed diam tristique, <br>   
+                    hendrerit placerat augue convallis. <br>
+                    Ut pulvinar commodo odio, et sagittis tellus pretium eget. <br>
+                    Aenean ut eros id ante vestibulum lobortis eget vitae lectus. <br>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
