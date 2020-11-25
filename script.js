@@ -1,13 +1,13 @@
-var scriptArea = $('.cke_contents_ltr');
-var isitOn = 0;
-
-function setSource(){
-    $('.cke_contents_ltr').val('hello'); 
-}
-
 $(document).ready(function(){
-    if(isitOn == 0){
-        $('.ckeditor').val(theme_default); 
-    }
+    $('.ckeditor').val(theme_test); 
 });
-$(document).on('click', '.cke_button__source', function(){});
+
+var txtA = document.querySelector('#load_page');
+$(document).on('click', '.tab', function(){
+    while ( txtA.hasChildNodes() ) { 
+        txtA.removeChild( txtA.firstChild ); 
+    }
+
+    txtA.removeChild('textarea');
+    $('.ckeditor').val(theme_default); 
+});

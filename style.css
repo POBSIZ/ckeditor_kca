@@ -5,7 +5,7 @@
 }
 
 body{
-	background-color: bisque;
+	background-color: white;
 }
 
 .load_page{
@@ -23,48 +23,3 @@ body{
 	width: 300px;
 	margin: auto;
 }
-#primary_nav_wrap{margin-top:15px}
-#primary_nav_wrap ul
-{
-	border-radius: 20px 20px 20px 20px;
-	list-style:none;
-	position:relative;
-	float:left;
-	margin:0;
-	padding:0
-}
-#primary_nav_wrap ul a
-{
-	display:block;
-	color:rgb(255, 255, 255);
-	text-decoration:none;
-	font-weight:700;
-	font-size:12px;
-	line-height:32px;
-	padding:0 15px;
-}
-#primary_nav_wrap ul li
-{
-	position:relative;
-	float:left;
-	margin:0;
-	padding:0
-}
-#primary_nav_wrap ul li.current-menu-item{background:rgb(214, 214, 214)}
-#primary_nav_wrap ul li:hover{
-	border-radius: 40px 40px 40px 40px;
-	background:rgb(173, 173, 173)
-}
-#primary_nav_wrap ul ul
-{
-	display:none;
-	position:absolute;
-	top:100%;
-	left:0;
-	background:rgb(146, 146, 146);
-	padding:0
-}
-#primary_nav_wrap ul ul li{float:none; width:300px}
-#primary_nav_wrap ul ul a{line-height:120%; padding:10px 15px}
-#primary_nav_wrap ul ul ul{top:0; left:100%}
-#primary_nav_wrap ul li:hover > ul{display:block}
